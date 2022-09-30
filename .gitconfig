@@ -1,0 +1,13 @@
+[user]
+	name = arch
+	email = chengruichen3@gmail.com
+[credential]
+	helper = store --file ~/.git-credentials
+#[url "https://hub.fastgit.org/"]
+#	insteadOf = https://github.com/
+[protocol "https"]
+	allow = always
+[init]
+	defaultBranch = master
+[color]
+	interactive = always
