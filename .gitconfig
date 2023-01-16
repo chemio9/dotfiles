@@ -1,8 +1,11 @@
+[core]
+	editor = nvim
 [user]
 	name = arch
 	email = chengruichen3@gmail.com
-[core]
-	editor = nvim
+	signingkey = BDD2A96380230561!
+[commit]
+	gpgsign = true
 [init]
 	defaultBranch = master
 [color]
