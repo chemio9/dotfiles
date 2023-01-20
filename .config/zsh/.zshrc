@@ -133,6 +133,7 @@ alias ll='exa -lah -stype'
 alias -g NO='2&1>/dev/null &'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 zinit cdreplay -q
-
+gpgconf --launch gpg-agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
