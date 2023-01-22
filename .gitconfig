@@ -23,3 +23,7 @@
 
 [maintenance]
 	repo = /home/arch
+[alias]
+	p = push
+  # track files status
+	LS = status --column=nodense,always --untracked-files=no
