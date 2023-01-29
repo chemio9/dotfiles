@@ -27,3 +27,5 @@
 	p = push
   # track files status
 	LS = status --column=nodense,always --untracked-files=no
+[diff]
+	tool = vimdiff
