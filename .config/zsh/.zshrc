@@ -109,8 +109,13 @@ autoload -Uz _zinit
 # }}}
 
 # zsh packages {{{
-zinit ice wait lucid atload'_zsh_autosuggest_start'
+zinit ice wait='0' lucid atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
+
+zinit ice lucid wait='0'
+zinit light zsh-users/zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
@@ -126,6 +131,7 @@ zinit light romkatv/powerlevel10k
 # DISABLE_LS_COLORS=true
 
 zinit light MichaelAquilina/zsh-you-should-use
+zinit light skywind3000/z.lua
 #}}}
 alias l='exa -lh -stype'
 alias ls='exa -stype'
@@ -133,7 +139,5 @@ alias ll='exa -lah -stype'
 alias -g NO='2&1>/dev/null &'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 zinit cdreplay -q
-gpgconf --launch gpg-agent
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
