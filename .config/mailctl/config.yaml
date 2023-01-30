@@ -1,0 +1,23 @@
+services_file: /home/arch/.config/mailctl/services.yaml
+oauth2_dir: /home/arch/.local/var/mailctl
+# This encryption method using gnupg.
+# Alternatives like gnome-keyring can also be configured here.
+encrypt_cmd:
+  exec: gpg
+  args:
+    - --encrypt
+    - --recipient
+    - 9382FD1D3B50C6FAC6DA48E5C3C24114E3E65AA6
+    - -o
+decrypt_cmd:
+  exec: gpg
+  args:
+    - --decrypt
+
+# Only if you are using a password manager for traditional access methods
+# This is an example of using `pass`
+password_store: /home/arch/.password-store
+pass_cmd:
+  exec: pass
+  args:
+    - email/
