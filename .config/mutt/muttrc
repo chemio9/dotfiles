@@ -45,17 +45,17 @@ set mailcap_path = ~/.config/mutt/mailcap
 
 #send mail {{{
 set sendmail = msmtp
-set realname="Chengrui Chen"           # 撰写新邮件时使用的名字
-set from="chengruichen3@gmail.com"     # 撰写新邮件时使用的邮件地址
-set forward_format="Fwd: %s"           # 转发的格式为 "Fwd: 标题"
-set forward_quote                      # 转发时将正文放到引用中
-set attribution="\n\nOn %d, %n wrote:" # 回复时引用前文的格式
-set reverse_name                       # 优先使用收件人的身份回复，而不是使用撰写新邮件时的地址
-set fast_reply                         # 回复时不会询问收件人和标题
-set include                            # 回复时附上前文
-set send_charset="utf-8"               # 发送邮件时使用的编码
-set editor="code -w -n"                # 编辑器，我使用的是 vscode，'-w'代表文件关闭后再返回命令
-set edit_headers                       # 允许编辑 Header (To: CC: Subject:)
+set realname="Chengrui Chen"           # the name I use to write new email
+set from="chengruichen3@gmail.com"     # the address I use to write new email
+set forward_format="Fwd: %s"           # forward format "Fwd: [Title]"
+set forward_quote                      # put ref in forward 
+set attribution="\n\nOn %d, %n wrote:" # ref format
+set reverse_name                       # reply as the recipient
+set fast_reply                         # don't ask for Subject and Addr when replying
+set include                            # reply with the previous text
+set send_charset="utf-8"               # encoding
+set editor="nvim"                      # use nvim to write mail
+set edit_headers                       # allow editing Header (To: CC: Subject: etc.)
 # }}}
 macro compose K "<attach-key>0xDBC8BC8D8B2DEFC299D6D17325B32AB221E7CD61<Return><Return>" "Attach my gpg key"
 
