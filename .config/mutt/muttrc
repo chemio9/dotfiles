@@ -10,7 +10,7 @@ set postponed=+Drafts
 set trash=+Trash
 alternates chengruichen3@gmail.com
 # must run mbsync before neomutt when ~/Mail didn't exists!
-mailboxes +Inbox +Sent +Trash +Notes
+mailboxes +Inbox +Sent +Trash +Notes +Drafts
 
 set sleep_time = 0
 set assumed_charset = "utf-8:GB18030"
