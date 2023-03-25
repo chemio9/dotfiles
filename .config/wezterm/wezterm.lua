@@ -1,5 +1,14 @@
 -- vim: fdm=marker
 local wezterm = require 'wezterm'
+
+local function scheme_for_appearance(appearance)
+  if appearance:find "Dark" then
+    return "Catppuccin Mocha"
+  else
+    return "Catppuccin Latte"
+  end
+end
+
 return {
   font = wezterm.font_with_fallback {
     'JetbrainsMono Nerd Font',
@@ -9,8 +18,7 @@ return {
   },
   text_background_opacity = 1,
   window_background_opacity = 0.9,
-  color_scheme_dirs = { '/home/arch/.config/nvim/lazy/tokyonight.nvim/extras/wezterm' },
-  color_scheme = 'tokyonight_night',
+  color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   hide_tab_bar_if_only_one_tab = true,
   use_fancy_tab_bar = true,
   window_close_confirmation = 'NeverPrompt',
