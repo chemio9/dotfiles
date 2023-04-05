@@ -2,10 +2,10 @@
 local wezterm = require 'wezterm'
 
 local function scheme_for_appearance(appearance)
-  if appearance:find "Dark" then
-    return "Catppuccin Mocha"
+  if appearance:find 'Dark' then
+    return 'Catppuccin Mocha'
   else
-    return "Catppuccin Latte"
+    return 'Catppuccin Latte'
   end
 end
 
