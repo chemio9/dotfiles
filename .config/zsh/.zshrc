@@ -137,7 +137,10 @@ alias l='exa -lh -stype'
 alias ls='exa -stype'
 alias ll='exa -lah -stype'
 alias -g NO='2&1>/dev/null &'
+alias md='mkdir -pv'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 zinit cdreplay -q
+
+export PATH=$HOME/.local/bin:$PATH
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
