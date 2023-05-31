@@ -141,6 +141,14 @@ alias md='mkdir -pv'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 zinit cdreplay -q
 
+proxy_on(){
+	export HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=127.0.0.1:7890 ALL_PROXY=http://127.0.0.1:7890
+}
+
+proxy_off(){
+	unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
+}
+
 export PATH=$HOME/.local/bin:$PATH
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
