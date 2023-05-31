@@ -1,0 +1,6 @@
+.gnupg
+.zlua
+.config/clash/logs
+.config/clash/providers/proxy
+.config/clash/cache.db
+.config/rclone/rclone.conf
