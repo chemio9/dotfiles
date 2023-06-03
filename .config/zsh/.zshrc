@@ -23,13 +23,6 @@ fi
 
 source $ZDOTDIR/config.zsh
 
-alias l='exa -lh -stype'
-alias ls='exa -stype'
-alias ll='exa -lah -stype'
-alias -g NO='2&1>/dev/null &'
-alias md='mkdir -pv'
-alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
-
 proxy_on(){
 	export HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=127.0.0.1:7890 ALL_PROXY=http://127.0.0.1:7890
 }
@@ -42,5 +35,12 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
+
+alias l='exa -lh -stype'
+alias ls='exa -stype'
+alias ll='exa -lah -stype'
+alias -g NO='2&1>/dev/null &'
+alias md='mkdir -pv'
+alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
