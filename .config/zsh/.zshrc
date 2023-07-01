@@ -36,9 +36,9 @@ export PATH=$HOME/.local/bin:$PATH
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
-alias l='exa -lh -stype'
-alias ls='exa -stype'
-alias ll='exa -lah -stype'
+alias l='lsd -lh'
+alias ls='lsd'
+alias ll='lsd -lah'
 alias -g NO='2&1>/dev/null &'
 alias md='mkdir -pv'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'

@@ -24,5 +24,5 @@ zmodule romkatv/powerlevel10k --use degit
 zmodule MichaelAquilina/zsh-you-should-use
 zmodule skywind3000/z.lua --cmd 'eval "$(lua {}/z.lua --init zsh enhanced once)"'
 
-zmodule Aloxaf/fzf-tab --if 'where fzf >/dev/null && true || false'
+# zmodule Aloxaf/fzf-tab --if 'where fzf >/dev/null && true || false'
 zmodule hlissner/zsh-autopair
