@@ -1,0 +1,5 @@
+set selection-clipboard clipboard
+set recolor "true"
+set recolor-keephue "true"
+set smooth-scroll "true"
+
