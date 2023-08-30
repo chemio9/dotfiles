@@ -18,7 +18,7 @@ return {
   window_background_opacity = 0.7,
   color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
   hide_tab_bar_if_only_one_tab = true,
-  use_fancy_tab_bar = true,
+  use_fancy_tab_bar = false,
   window_close_confirmation = 'NeverPrompt',
   -- hyperlink {{{
   hyperlink_rules = {
