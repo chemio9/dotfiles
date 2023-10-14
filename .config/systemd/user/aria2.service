@@ -1,0 +1,8 @@
+[Unit]
+Description=Aria2 Daemon
+
+[Service]
+ExecStart=/usr/bin/aria2c
+
+[Install]
+WantedBy=default.target
