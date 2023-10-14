@@ -43,4 +43,13 @@ alias -g NO='2&1>/dev/null &'
 alias md='mkdir -pv'
 alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
 
+screenshot() {
+	sleep 1;
+	grim -g "$(slurp)" /dev/stdout|wl-copy
+}
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+
+# autologin to Hyprland
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec Hyprland &
+fi
