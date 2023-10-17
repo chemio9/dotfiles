@@ -31,7 +31,7 @@ proxy_off(){
 	unset HTTP_PROXY HTTPS_PROXY ALL_PROXY
 }
 
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.yarn/bin:$PATH
 
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
