@@ -1,7 +1,22 @@
+# secret
+.ssh
 .gnupg
-.zlua
-.config/clash/logs
-.config/clash/providers/proxy
-.config/clash/cache.db
 .config/rclone/rclone.conf
+
+# cache
+.zlua
 .zim
+.cache
+.config/clash/logs
+.config/clash/cache.db
+
+# rust
+.cargo/registry
+.cargo/.package-cache
+
+# nodejs yarn
+.yarn/bin
+.config/yarn/global
+
+.local/state
+.config/clash/providers/proxy
