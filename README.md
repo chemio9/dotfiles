@@ -1,18 +1,19 @@
 ##  A repo stored my config files
 
 ### Configs Contained
-* Neovim ( v0.9+ or beta version recommended )
+* Neovim (v0.9+ or beta version recommended)
 * Wayland Desktop Environment
   * Hyprland
   * waybar
-  * eww ( still working, not pushed yet :P )
+  * eww (still working, not pushed yet :P)
 * aria2 download manager
+* swww wallpaper daemon
 * wezterm
-* paru & systemd ( on Archlinux )
+* paru & systemd (on Archlinux)
 * rofi launcher
 * zathura pdf reader
-* lsd ( ls replacement )
-* zsh ( powerlevel10k and zimfw )
+* lsd (ls replacement)
+* zsh (powerlevel10k and zimfw)
 
 ## Neovim Config Install instructions
 Install requires Neovim 0.9+. Always review the code before installing a configuration.
@@ -26,5 +27,5 @@ Open Neovim with this configuration
 NVIM_APPNAME=chenrry666/dotfiles/.config/nvim nvim
 ```
 
-### Something have to mention
+### Something IMPORTANT
 Always check the config files before you install! Use at your own risk!
