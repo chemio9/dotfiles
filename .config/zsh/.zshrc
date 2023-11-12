@@ -41,7 +41,7 @@ alias ls='lsd'
 alias ll='lsd -lah'
 alias -g NO='2&1>/dev/null &'
 alias md='mkdir -pv'
-alias mnt='rclone mount one:/ /home/arch/one/ --vfs-cache-mode full &disown'
+alias mnt="rclone mount one:/ ${HOME}/one/ --vfs-cache-mode full &disown"
 
 screenshot() {
 	sleep 1;
