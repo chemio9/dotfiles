@@ -1,16 +1,16 @@
-@theme "/home/arch/.config/rofi/theme.rasi"
+@theme "theme.rasi"
 configuration {
-    mode: "run,drun,window";
-	font: "JetbrainsMono Nerd Font 12";
-	show-icons: true;
-	terminal: "wezterm";
-    lines: 5;
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  window";
-    sidebar-mode: true;
+  mode: "run,drun,window";
+  font: "system-ui";
+  show-icons: true;
+  terminal: "wezterm";
+  lines: 5;
+  drun-display-format: "{icon} {name}";
+  location: 0;
+  disable-history: false;
+  hide-scrollbar: true;
+  display-drun: "   Apps ";
+  display-run: "   Run ";
+  display-window: " 﩯  window";
+  sidebar-mode: true;
 }
