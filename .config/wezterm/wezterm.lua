@@ -56,11 +56,12 @@ config.colors = {
   },
 }
 
+config.term = 'wezterm'
 config.font = wezterm.font_with_fallback {
-  'JetbrainsMono Nerd Font',
+  'Jetbrains Mono',
   { family = 'PingFang SC', weight = 'Bold' },
-  'Apple Color Emoji',
   'Noto Sans CJK',
+  'Apple Color Emoji',
 }
 config.text_background_opacity = 1
 config.window_background_opacity = 0.7
