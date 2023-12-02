@@ -1,18 +1,20 @@
-setopt interactivecomments
-setopt autocd
-setopt extendedglob
-#setopt globcomplete
-setopt completeinword
-setopt correct
+setopt INTERACTIVE_COMMENTS
+setopt AUTOCD
+setopt EXTENDED_GLOB
+#setopt GLOBCOMPLETE
+setopt COMPLETE_IN_WORD
+setopt CORRECT
 
 # history {{{
 export HISTSIZE=1000
 export SAVEHIST=1000
 export HISTFILE=$ZDOTDIR/.zhistory
-setopt extendedhistory
-setopt incappendhistory
-setopt histignoredups
-setopt histignorespace
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 # }}}
 
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
