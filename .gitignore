@@ -7,6 +7,9 @@
 .zlua
 .zim
 .cache
+.npm/_cacache
+.npm/_logs
+.config/zsh/.zcompcache
 .config/clash/logs
 .config/clash/cache.db
 
