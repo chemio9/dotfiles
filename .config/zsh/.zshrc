@@ -1,5 +1,5 @@
 # vim: fdm=marker
-#zim
+#zim{{{
 ZIM_HOME=~/.zim
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
@@ -11,6 +11,7 @@ fi
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
+# }}}
 
 # p10k {{{
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -32,9 +33,9 @@ proxy_off(){
 }
 
 export PATH=$HOME/.local/bin:$HOME/.yarn/bin:$PATH
-
-# Initialize modules.
-source ${ZIM_HOME}/init.zsh
+export EDITOR=nvim
+export BROWSER=firefox
+export MANPAGER='nvim +Man!'
 
 alias l='lsd -lh'
 alias ls='lsd'
@@ -47,6 +48,9 @@ screenshot() {
 	sleep 1;
 	grim -g "$(slurp)" /dev/stdout|wl-copy
 }
+
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 # autologin to Hyprland
