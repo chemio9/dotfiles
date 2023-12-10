@@ -1,5 +1,5 @@
-services_file: /home/arch/.config/mailctl/services.yaml
-oauth2_dir: /home/arch/.local/var/mailctl
+services_file: ~/.config/mailctl/services.yaml
+oauth2_dir: ~/.local/var/mailctl
 # This encryption method using gnupg.
 # Alternatives like gnome-keyring can also be configured here.
 encrypt_cmd:
