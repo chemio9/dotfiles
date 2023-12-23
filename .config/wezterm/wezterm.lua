@@ -13,18 +13,54 @@ end
 -- end
 config.color_scheme_dirs = { wezterm.config_dir }
 config.color_scheme = 'nightfox'
+
 config.term = 'wezterm'
+
 config.font = wezterm.font_with_fallback {
-  'monospace',
-  'Jetbrains Mono',
-  { family = 'PingFang SC', weight = 'Bold' },
+  { family = 'Jetbrains Mono', weight = 'Light' },
+  { family = 'PingFang SC',    weight = 'Bold' },
   'Noto Sans CJK',
   'Apple Color Emoji',
+  'Symbols Nerd Font',
 }
+config.font_size = 12
+
+config.font_rules = {
+  {
+    intensity = 'Bold',
+    italic = true,
+    font = wezterm.font {
+      family = 'VictorMono',
+      weight = 'Bold',
+      style = 'Italic',
+    },
+  },
+  {
+    italic = true,
+    intensity = 'Half',
+    font = wezterm.font {
+      family = 'VictorMono',
+      weight = 'DemiBold',
+      style = 'Italic',
+    },
+  },
+  {
+    italic = true,
+    intensity = 'Normal',
+    font = wezterm.font {
+      family = 'VictorMono',
+      style = 'Italic',
+    },
+  },
+}
+
+config.enable_kitty_keyboard = true
+
 config.text_background_opacity = 1
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.8
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
+
 config.window_close_confirmation = 'NeverPrompt'
 config.hyperlink_rules = {
   -- Linkify things that look like URLs and the host has a TLD name.
