@@ -1,30 +1,37 @@
-IMAPAccount gmail
+# ---ATTENTION---
+# mbsync configuration is seperated in many *sections*
+# each section has to be written on continuous lines
+# otherwise, it will break
+# ---------------
+
+IMAPAccount chen
 # Address to connect to
 Host imap.gmail.com
+Port 993
+Timeout 0 # unlimited
+# Use TLS
+# CertificateFile /etc/ssl/certs/ca-certificates.crt
+SSLType IMAPS
+SystemCertificates yes
 User chengruichen3@gmail.com
+# use mailctl to handle authentication
 PassCmd "mailctl access chengruichen3@gmail.com"
 AuthMechs XOAUTH2
-#
-# Use SSL
-SSLType IMAPS
-CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 IMAPStore gmail-remote
-Account gmail
+Account chen
 
 MaildirStore gmail-local
 SubFolders Verbatim
 # The trailing "/" is important
-Path ~/Mail/
-Inbox ~/Mail/Inbox
+Path ~/.mail/
+Inbox ~/.mail/Inbox
 
 Channel gmail
 Far :gmail-remote:
 Near :gmail-local:
-# Exclude everything under the internal [Gmail] folder, except the interesting folders
-Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
-# Or include everything
-#Patterns *
+# Exclude everything under the internal [Gmail] folder
+Patterns * ![Gmail]*
 # Automatically create missing mailboxes, both locally and on the server
 Create Both
 # Sync the movement of messages between folders and deletions, add after making sure the sync works
