@@ -1,28 +1,25 @@
+# vim:ft=bash
+
 zmodule environment
-# Provides handy git aliases and functions.
-zmodule git
-# Applies correct bindkeys for input events.
 zmodule input
-# Sets a custom terminal title.
 zmodule termtitle
-# Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
+zmodule archive
+# zmodule le0me55i/zsh-extract -s 'extract.plugin.zsh'
+
+zmodule romkatv/powerlevel10k --use degit
 
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 
-zmodule zdharma/fast-syntax-highlighting -s 'F-Sy-H.plugin.zsh'
-
-zmodule zsh-users/zsh-history-substring-search -s 'zsh-history-substring-search.zsh' --cmd " \
-	bindkey \"^[[A\" history-substring-search-up; \
-	bindkey \"^[[B\" history-substring-search-down "
-
 zmodule zsh-users/zsh-autosuggestions
-
-zmodule romkatv/powerlevel10k --use degit
+zmodule zdharma/fast-syntax-highlighting -s 'F-Sy-H.plugin.zsh'
+zmodule zsh-users/zsh-history-substring-search -s 'zsh-history-substring-search.zsh' --cmd " \
+  bindkey \"^[OA\" history-substring-search-up ;\
+  bindkey \"^[OB\" history-substring-search-down "
 
 zmodule MichaelAquilina/zsh-you-should-use
-zmodule skywind3000/z.lua --cmd 'eval "$(lua {}/z.lua --init zsh enhanced once)"'
+zmodule skywind3000/z.lua --cmd 'eval "$(command -v lua > /dev/null && lua {}/z.lua --init zsh enhanced once)"'
 
-# zmodule Aloxaf/fzf-tab --if 'where fzf >/dev/null && true || false'
+# zmodule Aloxaf/fzf-tab --if 'where fzf >>/dev/null'
 zmodule hlissner/zsh-autopair
