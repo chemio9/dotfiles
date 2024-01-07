@@ -5,8 +5,7 @@
 # ---------------
 
 IMAPAccount chen
-# Address to connect to
-Host imap.gmail.com
+Host imap.gmail.com # Address to connect to
 Port 993
 Timeout 0 # unlimited
 # Use TLS
@@ -14,8 +13,7 @@ Timeout 0 # unlimited
 SSLType IMAPS
 SystemCertificates yes
 User chengruichen3@gmail.com
-# use mailctl to handle authentication
-PassCmd "mailctl access chengruichen3@gmail.com"
+PassCmd "mailctl access chengruichen3@gmail.com" # use mailctl to handle authentication
 AuthMechs XOAUTH2
 
 IMAPStore gmail-remote
@@ -23,8 +21,7 @@ Account chen
 
 MaildirStore gmail-local
 SubFolders Verbatim
-# The trailing "/" is important
-Path ~/.mail/
+Path ~/.mail/ # The trailing "/" is important
 Inbox ~/.mail/Inbox
 
 Channel gmail
