@@ -1,2 +1,3 @@
 GO111MODULE=on
+GOMODCACHE=/home/clara/.cache/go/
 GOPROXY=https://goproxy.cn,direct
