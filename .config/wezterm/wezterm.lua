@@ -23,7 +23,7 @@ config.font = wezterm.font_with_fallback {
   'Apple Color Emoji',
   'Symbols Nerd Font',
 }
-config.font_size = 12
+config.font_size = 10
 
 config.font_rules = {
   {
