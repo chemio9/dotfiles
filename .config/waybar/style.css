@@ -1,42 +1,69 @@
 @import url("./Macchiato.css");
+/*
+  window#waybar.background.top.eDP-1..mode-default.solo.swallowing.org.wezfurlong.wezterm
+  decoration
+  box.horizontal
+    box.horizontal.modules-left
+      widget
+        box#workspaces.horizontal
+          button.flat
+            box.horizontal
+              label
+          button.flat
+            box.horizontal
+              label
+          button.flat
+            box.horizontal
+              label
+      widget
+        box.horizontal
+          image
+          label#window
+    box.horizontal.modules-center
+    box.horizontal.modules-right
+      widget
+        label#pulseaudio
+      widget
+        label#cpu
+      widget
+        label#memory
+      widget
+        label#temperature
+      widget
+        box#keyboard-state.horizontal
+          label.capslock
+          label.numlock
+      widget
+        box#tray.horizontal
+      widget
+        label#clock
+ */
 window#waybar {
-  background: transparent;
   color: @text;
-  font-size: 14px;
-}
-window > box {
-  margin: 5px 7px;
-}
-
-window .modules-left,
-window .modules-right {
   background: @base;
-  border-radius: 8px;
-}
-window #workspaces button,
-window label {
-  box-shadow: none;
-  min-width: 40px;
-  text-shadow: none;
-  border: none;
-  margin: 5px;
+  font-size: 12px;
+  font-family:"Monospace","PingFang SC";
+  font-weight: 500;
 }
 
-window .modules-left #workspaces button:hover,
-window .modules-left #workspaces button.focused:hover,
-window .modules-left #workspaces button.focused {
-  background-color: @crust;
-}
-
-.modules-right {
-  padding-left: 10px;
-}
-
-#window {
+window button:hover,
+window button.active {
   background-color: @surface0;
-  padding: 0 15px;
+}
+
+.modules-left label {
+  padding: 0 .3rem;
+}
+.modules-right {
+  padding-left: 8px;
+}
+.modules-right label {
+  padding: 0 .5rem;
+}
+#tray {
+  padding: 0 .6rem;
 }
 
 #clock {
-  margin-right: 14px;
+  margin: 0 1rem;
 }

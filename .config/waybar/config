@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 4,
+  "spacing": 0,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
   "modules-right": [
@@ -76,7 +76,7 @@
     "format-source-muted": "",
     "format-icons": {
       "headphone": "󰋋",
-      "hands-free": "",
+      "hands-free": "",
       "headset": "󰋎",
       "phone": "󰄜",
       "portable": "",
