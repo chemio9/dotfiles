@@ -42,4 +42,5 @@ export MANPAGER='nvim +Man!'
 
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
+eval "$(zoxide init zsh)"
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh

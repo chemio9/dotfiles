@@ -19,7 +19,6 @@ zmodule zsh-users/zsh-history-substring-search -s 'zsh-history-substring-search.
   bindkey \"^[OB\" history-substring-search-down "
 
 zmodule MichaelAquilina/zsh-you-should-use
-zmodule skywind3000/z.lua --cmd 'eval "$(command -v lua > /dev/null && lua {}/z.lua --init zsh enhanced once)"'
 
 # zmodule Aloxaf/fzf-tab --if 'where fzf >>/dev/null'
 zmodule hlissner/zsh-autopair
