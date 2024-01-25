@@ -1,0 +1,7 @@
+[Defaults]
+Profile=DEF
+
+[PROFILE_DEF]
+EmailClient[$e]=aerc.desktop
+ServerType=
+TerminalClient=true
