@@ -26,3 +26,9 @@
 
 # systemd (enable it manually on a new computer)
 .config/systemd/user/default.target.wants
+
+.config/gh/hosts.yml
+.config/aria2/aria2.session
+.config/mpd/log
+.config/ncmpcpp/previews
+.config/systemd/user/sockets.target.wants
