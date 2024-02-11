@@ -1,0 +1,44 @@
+[FolderNameFilter]
+# github/receipt Tag： +github +receipt
+maildir_separator = /
+folder_blacklist = Archive Trash
+folder_lowercases = true
+
+[SpamFilter]
+# tagged junk by the server
+spam_tag = 'junk'
+
+# killed threads that im not interested in
+# +killed
+[KillThreadsFilter]
+
+# Email Headers  List-Id： +lists/list-id
+[ListMailsFilter]
+
+# sent mails dont tag
+# [ArchiveSentMailsFilter]
+
+# +to-me
+[MeFilter]
+
+# +new => +inbox
+[InboxFilter]
+
+# others or customized filters
+# https://afew.readthedocs.io/en/latest/filters.html
+
+#########################
+[MailMover]
+folders = "Inbox" "Drafts" "Archive" "Junk" "Trash" "Sent"
+rename = True
+
+# max_age = 15
+
+# https://github.com/afewmail/afew/issues/242
+Inbox = 'tag:junk':Junk 'NOT tag:inbox AND NOT tag:junk AND NOT tag:unread':Archive 'tag:deleted':Trash
+Junk = 'NOT tag:junk AND tag:inbox AND NOT tag:deleted':Inbox 'NOT tag:junk AND NOT tag:deleted':Archive  'tag:deleted':Trash
+Archive = 'tag:inbox AND NOT tag:junk AND NOT tag:deleted':Inbox 'tag:junk AND NOT tag:deleted':Junk 'tag:draft AND NOT tag:sent AND NOT tag:deleted':Drafts 'tag:deleted':Trash
+# Archive = 'tag:deleted':Trash
+Sent = 'NOT tag:sent':Inbox 'tag:deleted':Trash
+Drafts = 'tag:sent':Sent 'tag:deleted':Trash
+Trash = 'NOT tag:deleted AND NOT tag:junk AND NOT tag:inbox':Archive 'tag:junk AND NOT tag:deleted':Junk 'tag:inbox AND NOT tag:deleted AND NOT tag:junk':Inbox

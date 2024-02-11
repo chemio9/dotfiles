@@ -2,6 +2,8 @@
 .ssh
 .gnupg
 .config/rclone/rclone.conf
+.mail/*
+!.mail/.gitkeep
 
 # cache
 .zlua
