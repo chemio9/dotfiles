@@ -4,6 +4,8 @@ setopt EXTENDED_GLOB
 #setopt GLOBCOMPLETE
 setopt COMPLETE_IN_WORD
 setopt CORRECT
+setopt NO_NOMATCH
+setopt APPENDCREATE
 
 # history {{{
 export HISTSIZE=1000
@@ -78,7 +80,7 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-# autoload -Uz add-zsh-hook
+autoload -Uz add-zsh-hook
 # function reset_broken_terminal () {
 # 	printf '%b' '\e[0m\e(B\e)0\017\e[?5l\e7\e[0;0r\e8'
 # }
