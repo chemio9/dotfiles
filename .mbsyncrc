@@ -25,13 +25,65 @@ Path ~/.mail/ # The trailing "/" is important
 Inbox ~/.mail/Inbox
 
 Channel gmail
-Far :gmail-remote:
-Near :gmail-local:
-# Exclude everything under the internal [Gmail] folder
-Patterns * ![Gmail]*
+Far :gmail-remote:"INBOX"
+Near :gmail-local:Inbox
+# Far :gmail-remote:
+# Near :gmail-local:
+# Pattern *
+# Exclude everything under the internal [gmail] folder
 # Automatically create missing mailboxes, both locally and on the server
 Create Both
 # Sync the movement of messages between folders and deletions, add after making sure the sync works
 Expunge Both
 # Save the synchronization state files in the relevant directory
 SyncState *
+
+# 所有邮件     &YkBnCZCuTvY-
+Channel gmail-archive
+Far :gmail-remote:"[Gmail]/&YkBnCZCuTvY-"
+Near :gmail-local:Archive
+Create Near
+Expunge Both
+SyncState *
+
+# 已发邮件     &XfJT0ZCuTvY-
+Channel gmail-sent
+Far :gmail-remote:"[Gmail]/&XfJT0ZCuTvY-"
+Near :gmail-local:Sent
+Create Near
+SyncState *
+Expunge Both
+
+# 已删除邮件    &XfJSIJZkkK5O9g-
+Channel gmail-trash
+Far :gmail-remote:"[Gmail]/&XfJSIJZkkK5O9g-"
+Near :gmail-local:Trash
+Create Near
+SyncState *
+Expunge Both
+
+# 草稿         &g0l6Pw-
+Channel gmail-drafts
+Far :gmail-remote:"[Gmail]/&g0l6Pw-"
+Near :gmail-local:Drafts
+Create Near
+SyncState *
+Expunge Both
+
+# 垃圾邮件     &V4NXPpCuTvY-
+Channel gmail-junk
+Far :gmail-remote:"[Gmail]/&V4NXPpCuTvY-"
+Near :gmail-local:Junk
+Create Near
+SyncState *
+Expunge Both
+
+# 已加星标     &XfJSoGYfaAc-
+Channel gmail-Starred
+Far :gmail-remote:"[Gmail]/&XfJSoGYfaAc-"
+Near :gmail-local:Starred
+Create Near
+SyncState *
+Expunge Both
+
+# 重要         &kc2JgQ-
