@@ -1,4 +1,4 @@
-execute_on_song_change = "~/.config/ncmpcpp/songinfo"
+# execute_on_song_change = "~/.config/ncmpcpp/songinfo"
 
 user_interface = "alternative"
 alternative_header_first_line_format = "$(white)─┤ $b$(magenta)%a$(end)$/b ├─$(end)"
