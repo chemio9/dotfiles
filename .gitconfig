@@ -1,31 +1,41 @@
-[core]
-	editor = nvim
-[user]
-	name = chenrry666
-	email = chengruichen3@gmail.com
-	signingkey = BDD2A96380230561!
-[commit]
-	gpgsign = true
 [init]
-	defaultBranch = master
+  defaultBranch = main
+[core]
+  editor = nvim
+  pager = delta
+[user]
+  name = Clarence
+  email = chengruichen3@gmail.com
+  signingkey = BDD2A96380230561!
+[commit]
+  gpgsign = true
+
 [color]
-	ui = true
+  ui = true
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  line-numbers              = true
+  line-numbers-left-format  = │{nm:^4}
+  line-numbers-right-format = │{np:^4}│
+  syntax-theme              = Monokai Extended
+  tabs                      = 2
+  word-diff-regex           = .
+
+[merge]
+  tool = nvimdiff
+[diff]
+  tool = nvimdiff
+  colorMoved = default
 
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
 
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper =
+  helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-
-[maintenance]
-	repo = /home/arch
-[alias]
-	p = push
-  # track files status
-	LS = status --column=nodense,always --untracked-files=no
-[diff]
-	tool = vimdiff
+  helper =
+  helper = !/usr/bin/gh auth git-credential
+[sendemail]
+  sendmailCmd = /usr/bin/msmtp
