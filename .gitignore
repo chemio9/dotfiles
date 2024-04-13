@@ -1,36 +1,41 @@
 # secret
-.ssh
-.gnupg
+.config/gh/hosts.yml
 .config/rclone/rclone.conf
+.sec
+.gnupg
 .mail/*
 !.mail/.gitkeep
+.ssh
 
 # cache
-.zlua
-.zim
 .cache
-.npm/_cacache
-.npm/_logs
-.config/zsh/.zcompcache
-.config/clash/logs
+.config/aria2/aria2.session
 .config/clash/cache.db
+.config/clash/logs
+.config/zsh/.zcompcache
+.local/state
+.zim
+.zlua
 
 # rust
+.cargo/.package-cache-mutate
 .cargo/registry
 .cargo/.package-cache
 
 # nodejs yarn
-.yarn/bin
 .config/yarn/global
+.npm/_cacache
+.npm/_logs
+.yarn/bin
+.yarn/berry/cache
+.yarn/berry/metadata/npm/3fb1ad
+.yarn/berry/telemetry.json
 
-.local/state
 .config/clash/providers/proxy
 
 # systemd (enable it manually on a new computer)
-.config/systemd/user/default.target.wants
+.config/systemd/user/*.target.wants
 
-.config/gh/hosts.yml
-.config/aria2/aria2.session
-.config/mpd/log
-.config/ncmpcpp/previews
-.config/systemd/user/sockets.target.wants
+.minecraft
+
+usr
