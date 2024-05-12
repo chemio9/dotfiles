@@ -3,14 +3,14 @@ configuration {
   mode: "run,drun,window";
   font: "system-ui";
   show-icons: true;
-  terminal: "wezterm";
-  lines: 5;
+  terminal: "kitty";
+  lines: 8;
   drun-display-format: "{icon} {name}";
   location: 0;
   disable-history: false;
   hide-scrollbar: true;
   display-drun: "   Apps ";
   display-run: "   Run ";
-  display-window: " 﩯  window";
+  display-window: " 󰕰  window";
   sidebar-mode: true;
 }
