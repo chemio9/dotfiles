@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "Reledia/glow", commit = "536185a" }, { use = "TD-Sky/sudo", commit = "7c8db5e" }]
+
+[flavor]
+deps = []

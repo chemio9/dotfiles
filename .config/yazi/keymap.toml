@@ -1,0 +1,39 @@
+[[manager.prepend_keymap]]
+on   = [ "<C-s>" ]
+run  = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"
+
+###########################################
+#                                         #
+#             sudo.yazi                   #
+#                                         #
+###########################################
+# sudo cp/mv
+[[manager.append_keymap]]
+on = ["R", "p"]
+run = "plugin sudo --args='paste'"
+desc = "sudo paste"
+
+# sudo ln -s (absolute-path)
+[[manager.append_keymap]]
+on = ["R", "l"]
+run = "plugin sudo --args='link'"
+desc = "sudo link"
+
+# sudo touch/mkdir
+[[manager.append_keymap]]
+on = ["R", "a"]
+run = "plugin sudo --args='create'"
+desc = "sudo create"
+
+# sudo trash
+[[manager.append_keymap]]
+on = ["R", "d"]
+run = "plugin sudo --args='remove'"
+desc = "sudo trash"
+
+# sudo delete
+[[manager.append_keymap]]
+on = ["R", "D"]
+run = "plugin sudo --args='remove -P'"
+desc = "sudo delete"
