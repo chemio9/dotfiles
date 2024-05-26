@@ -13,7 +13,7 @@ Timeout 0 # unlimited
 SSLType IMAPS
 SystemCertificates yes
 User chengruichen3@gmail.com
-PassCmd "mailctl access chengruichen3@gmail.com" # use mailctl to handle authentication
+PassCmd "oama access chengruichen3@gmail.com" # use mailctl to handle authentication
 AuthMechs XOAUTH2
 
 IMAPStore gmail-remote
