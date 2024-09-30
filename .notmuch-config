@@ -47,7 +47,7 @@ other_email=chenrry666@foxmail.com
 #		in the mail store.
 #
 [new]
-tags=inbox;unread;sent
+tags=inbox;unread
 
 # Search configuration
 #

@@ -1,7 +1,7 @@
 [FolderNameFilter]
 # github/receipt Tag： +github +receipt
 maildir_separator = /
-folder_blacklist = Archive Trash
+folder_blacklist =
 folder_lowercases = true
 
 [SpamFilter]

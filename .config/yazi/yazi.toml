@@ -13,6 +13,7 @@ origin = "bottom-center"
 
 [open]
 rules = [
+
   { mime = "text/*",          use = [ "edit", "reveal" ] },
   { mime = "image/*",         use = [ "open", "reveal" ] },
   { mime = "{audio,video}/*", use = [ "play", "reveal" ] },
@@ -25,9 +26,27 @@ rules = [
   { mime = "*/javascript",     use = [ "edit", "reveal" ] },
 
   { mime = "*", use = ["open", "reveal", "edit"] },
+
 ]
 
 [plugin]
 prepend_previewers = [
   { name = "*.md", run = "glow" },
+  { mime = "audio/*",   run = "exifaudio"},
+
+	# Allmytoes doesn't handle these by default
+	{ mime = "image/svg+xml", run = "magick" },
+	{ mime = "image/heic",    run = "magick" },
+	{ mime = "image/jxl",     run = "magick" },
+	# Handle other image types with allmytoes
+	{ mime = "image/*", run = "allmytoes" },
+]
+
+prepend_preloaders = [
+	# Allmytoes doesn't handle these by default
+	{ mime = "image/svg+xml", run = "magick" },
+	{ mime = "image/heic",    run = "magick" },
+	{ mime = "image/jxl",     run = "magick" },
+	# Handle other image types with allmytoes
+	{ mime = "image/*", run = "allmytoes" },
 ]

@@ -2,25 +2,37 @@
   defaultBranch = main
 [core]
   editor = nvim
-  pager = delta
+  pager  = delta
 [user]
-  name = Clarence
-  email = chengruichen3@gmail.com
+  name       = Clarence
+  email      = chengruichen3@gmail.com
   signingkey = BDD2A96380230561!
 [commit]
   gpgsign = true
 
 [color]
   ui = true
+
 [interactive]
   diffFilter = delta --color-only
+
 [delta]
+  features        = decorations line-number
+  syntax-theme    = Monokai Extended
+  tabs            = 2
+  word-diff-regex = .
+[delta "decorations"]
+  commit-decoration-style       = blue ol
+  commit-style                  = raw
+  file-style                    = omit
+  hunk-header-decoration-style  = ol
+  hunk-header-file-style        = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style             = file line-number syntax
+[delta "line-number"]
   line-numbers              = true
-  line-numbers-left-format  = │{nm:^4}
-  line-numbers-right-format = │{np:^4}│
-  syntax-theme              = Monokai Extended
-  tabs                      = 2
-  word-diff-regex           = .
+  line-numbers-left-format  = {nm:>4}┊
+  line-numbers-right-format = {np:>4}│
 
 [merge]
   tool = nvimdiff
@@ -37,5 +49,9 @@
 [credential "https://gist.github.com"]
   helper =
   helper = !/usr/bin/gh auth git-credential
+
 [sendemail]
   sendmailCmd = /usr/bin/msmtp
+
+[safe]
+	directory = /opt/esp-idf

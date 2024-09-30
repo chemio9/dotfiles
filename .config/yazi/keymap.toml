@@ -3,11 +3,8 @@ on   = [ "<C-s>" ]
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
-###########################################
-#                                         #
-#             sudo.yazi                   #
-#                                         #
-###########################################
+##################################
+
 # sudo cp/mv
 [[manager.append_keymap]]
 on = ["R", "p"]
@@ -37,3 +34,15 @@ desc = "sudo trash"
 on = ["R", "D"]
 run = "plugin sudo --args='remove -P'"
 desc = "sudo delete"
+
+###############################
+[[manager.prepend_keymap]]
+on   = [ "g", "i" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
+
+###############################
+[[manager.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"

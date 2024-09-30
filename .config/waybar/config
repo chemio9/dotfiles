@@ -1,18 +1,47 @@
 {
   "layer": "top",
   "position": "top",
-  "spacing": 0,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "spacing": 2,
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
   "modules-center": [],
   "modules-right": [
+    "mpd",
     "pulseaudio",
     "cpu",
     "memory",
     "temperature",
     "keyboard-state",
     "tray",
-    "clock",
+    "clock"
   ],
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "interval": 10,
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"> </span> ", // Icon grayed out when "random" is off
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": " 1"
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
   "hyprland/workspaces": {
     "on-click": "activate",
     "sort-by": "default",
@@ -25,8 +54,8 @@
       "5": "",
       "urgent": "",
       "active": "",
-      "default": "",
-    },
+      "default": ""
+    }
   },
   "keyboard-state": {
     "numlock": true,
@@ -34,29 +63,29 @@
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": " ",
-    },
+      "unlocked": " "
+    }
   },
   "hyprland/window": {
     "format": "{}",
-    "separate-outputs": false,
+    "separate-outputs": false
     // "max-length": 20
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 10,
+    "spacing": 10
   },
   "clock": {
     "timezone": "Asia/Shanghai",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
+    "format-alt": "{:%Y-%m-%d}"
   },
   "cpu": {
     "format": "{usage}% ",
-    "tooltip": false,
+    "tooltip": false
   },
   "memory": {
-    "format": "{}% ",
+    "format": "{}% "
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -64,7 +93,11 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
   },
   "pulseaudio": {
     "scroll-step": -1, // %, can be a float
@@ -81,8 +114,12 @@
       "phone": "󰄜",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ]
     },
-    "on-click": "pavucontrol",
-  },
+    "on-click": "pavucontrol"
+  }
 }

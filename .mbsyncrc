@@ -10,7 +10,7 @@ Port 993
 Timeout 0 # unlimited
 # Use TLS
 # CertificateFile /etc/ssl/certs/ca-certificates.crt
-SSLType IMAPS
+TLSType IMAPS
 SystemCertificates yes
 User chengruichen3@gmail.com
 PassCmd "oama access chengruichen3@gmail.com" # use mailctl to handle authentication
@@ -29,8 +29,7 @@ Far :gmail-remote:"INBOX"
 Near :gmail-local:Inbox
 # Far :gmail-remote:
 # Near :gmail-local:
-# Pattern *
-# Exclude everything under the internal [gmail] folder
+# Pattern * ![Gmail]/*
 # Automatically create missing mailboxes, both locally and on the server
 Create Both
 # Sync the movement of messages between folders and deletions, add after making sure the sync works
@@ -40,7 +39,7 @@ SyncState *
 
 # 所有邮件     &YkBnCZCuTvY-
 Channel gmail-archive
-Far :gmail-remote:"[Gmail]/&YkBnCZCuTvY-"
+Far :gmail-remote:"[Gmail]/All Mail"
 Near :gmail-local:Archive
 Create Near
 Expunge Both
@@ -48,7 +47,7 @@ SyncState *
 
 # 已发邮件     &XfJT0ZCuTvY-
 Channel gmail-sent
-Far :gmail-remote:"[Gmail]/&XfJT0ZCuTvY-"
+Far :gmail-remote:"[Gmail]/Sent Mail"
 Near :gmail-local:Sent
 Create Near
 SyncState *
@@ -56,7 +55,7 @@ Expunge Both
 
 # 已删除邮件    &XfJSIJZkkK5O9g-
 Channel gmail-trash
-Far :gmail-remote:"[Gmail]/&XfJSIJZkkK5O9g-"
+Far :gmail-remote:"[Gmail]/Trash"
 Near :gmail-local:Trash
 Create Near
 SyncState *
@@ -64,7 +63,7 @@ Expunge Both
 
 # 草稿         &g0l6Pw-
 Channel gmail-drafts
-Far :gmail-remote:"[Gmail]/&g0l6Pw-"
+Far :gmail-remote:"[Gmail]/Drafts"
 Near :gmail-local:Drafts
 Create Near
 SyncState *
@@ -72,7 +71,7 @@ Expunge Both
 
 # 垃圾邮件     &V4NXPpCuTvY-
 Channel gmail-junk
-Far :gmail-remote:"[Gmail]/&V4NXPpCuTvY-"
+Far :gmail-remote:"[Gmail]/Spam"
 Near :gmail-local:Junk
 Create Near
 SyncState *
@@ -80,10 +79,16 @@ Expunge Both
 
 # 已加星标     &XfJSoGYfaAc-
 Channel gmail-Starred
-Far :gmail-remote:"[Gmail]/&XfJSoGYfaAc-"
+Far :gmail-remote:"[Gmail]/Starred"
 Near :gmail-local:Starred
 Create Near
 SyncState *
 Expunge Both
 
 # 重要         &kc2JgQ-
+Channel gmail-Starred
+Far :gmail-remote:"[Gmail]/Important"
+Near :gmail-local:Starred
+Create Near
+SyncState *
+Expunge Both

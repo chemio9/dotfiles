@@ -1,5 +1,8 @@
 [General]
-ColorScheme=McMojave
+ColorScheme=BreezeDark
 
 [Icons]
-Theme=McMojave-circle-dark
+Theme=breeze-dark
+
+[KDE]
+widgetStyle=Breeze

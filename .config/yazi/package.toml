@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "Reledia/glow", commit = "536185a" }, { use = "TD-Sky/sudo", commit = "7c8db5e" }]
+deps = [{ use = "Reledia/glow", rev = "4e016fa" }, { use = "TD-Sky/sudo", rev = "8702082" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "yazi-rs/plugins:chmod", rev = "2b001d2" }, { use = "dedukun/relative-motions", rev = "73f5542" }, { use = "Sonico98/exifaudio", rev = "6205460" }, { use = "Sonico98/allmytoes", rev = "e532913" }]
 
 [flavor]
 deps = []
