@@ -1,31 +1,18 @@
-##  A repo stored my config files
+# Dotfiles
 
-### Configs Contained
-* Neovim (v0.9+ or beta version recommended)
 * Wayland Desktop Environment
   * Hyprland
   * waybar
-  * eww (still working, not pushed yet :P)
 * aria2 download manager
 * swww wallpaper daemon
-* wezterm
+* wezterm, kitty
 * paru & systemd (on Archlinux)
 * rofi launcher
 * zathura pdf reader
 * lsd (ls replacement)
 * zsh (powerlevel10k and zimfw)
+* yazi terminal file manager
 
-## Neovim Config Install instructions
-Install requires Neovim 0.9+. Always review the code before installing a configuration.
-Clone the repository and install plugins
-```bash
-git clone git@github.com:chenrry666/dotfiles ~/.config/chenrry666/dotfiles
-NVIM_APPNAME=chenrry666/dotfiles/.config/nvim nvim --headless +"Lazy! sync" +qa
-```
-Open Neovim with this configuration
-```bash
-NVIM_APPNAME=chenrry666/dotfiles/.config/nvim nvim
-```
 
-### Something IMPORTANT
-Always check the config files before you install! Use at your own risk!
+> [!WARNING]
+> Always audit the config files before you install! Use at your own risk!
