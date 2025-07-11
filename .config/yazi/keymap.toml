@@ -1,39 +1,30 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = [ "<C-s>" ]
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"
 
-###########################################
-#                                         #
-#             sudo.yazi                   #
-#                                         #
-###########################################
-# sudo cp/mv
-[[manager.append_keymap]]
-on = ["R", "p"]
-run = "plugin sudo --args='paste'"
-desc = "sudo paste"
+[[mgr.prepend_keymap]]
+on   = [ "g", "i" ]
+run  = "plugin lazygit"
+desc = "run lazygit"
 
-# sudo ln -s (absolute-path)
-[[manager.append_keymap]]
-on = ["R", "l"]
-run = "plugin sudo --args='link'"
-desc = "sudo link"
+[[mgr.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
 
-# sudo touch/mkdir
-[[manager.append_keymap]]
-on = ["R", "a"]
-run = "plugin sudo --args='create'"
-desc = "sudo create"
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
 
-# sudo trash
-[[manager.append_keymap]]
-on = ["R", "d"]
-run = "plugin sudo --args='remove'"
-desc = "sudo trash"
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
 
-# sudo delete
-[[manager.append_keymap]]
-on = ["R", "D"]
-run = "plugin sudo --args='remove -P'"
-desc = "sudo delete"
+###############################
+
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"

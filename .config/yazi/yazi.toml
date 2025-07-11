@@ -11,6 +11,7 @@ image_filter = "lanczos3"
 [input]
 origin = "bottom-center"
 
+
 [open]
 rules = [
   { mime = "text/*",          use = [ "edit", "reveal" ] },
@@ -27,7 +28,17 @@ rules = [
   { mime = "*", use = ["open", "reveal", "edit"] },
 ]
 
+[opener]
+extract = [
+	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+	{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
+]
+
 [plugin]
 prepend_previewers = [
   { name = "*.md", run = "glow" },
+  { mime = "audio/*",   run = "exifaudio"},
+]
+
+prepend_preloaders = [
 ]
