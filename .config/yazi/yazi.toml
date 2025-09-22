@@ -34,11 +34,14 @@ extract = [
 	{ run = 'ya pub extract --list %*',   desc = "Extract here", for = "windows" },
 ]
 
-[plugin]
-prepend_previewers = [
-  { name = "*.md", run = "glow" },
-  { mime = "audio/*",   run = "exifaudio"},
-]
+[[plugin.prepend_previewers]]
+mime = "audio/*"
+run = "exifaudio"
 
-prepend_preloaders = [
-]
+[[plugin.prepend_previewers]]
+name = "*.csv"
+run  = 'piper -- bat -p --color=always "$1"'
+
+[[plugin.prepend_previewers]]
+name = "*.md"
+run  = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'

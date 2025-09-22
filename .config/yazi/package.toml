@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "Reledia/glow"
-rev = "bd3eaa5"
-hash = "92b5c58159a51c567f82b618cee2b78"
-
-[[plugin.deps]]
 use = "Lil-Dank/lazygit"
 rev = "7a08a09"
 hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
@@ -27,6 +22,11 @@ hash = "4761fffb60a12d37096c34a356380cdf"
 use = "yazi-rs/plugins:toggle-pane"
 rev = "b886025"
 hash = "d6f60c24d8c0cf57a855bf46115b2502"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "b886025"
+hash = "2143a53182dbbe935a1abd1623424aa5"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
