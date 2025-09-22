@@ -1,6 +1,6 @@
 proxy_on(){
-  [[ -z "$HOST" ]] || local HOST=127.0.0.1
-  export HTTP_PROXY=http://${HOST}:1081 HTTPS_PROXY=http://${HOST}:1081 ALL_PROXY=http://${HOST}:1081
+  [[ -z "$1" ]] && local HOST=127.0.0.1 || HOST=$1
+  export HTTP_PROXY=http://${HOST}:7890 HTTPS_PROXY=http://${HOST}:7890 ALL_PROXY=http://${HOST}:7890
 }
 proxy_off(){ unset HTTP_PROXY HTTPS_PROXY ALL_PROXY }
 

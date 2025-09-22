@@ -33,7 +33,7 @@ source $ZDOTDIR/config.zsh
 source $ZDOTDIR/alias.zsh
 
 typeset -U path PATH
-path=(~/.local/bin ~/.yarn/bin $path)
+path=(~/.local/bin ~/.cargo/bin ~/.yarn/bin $path)
 export PATH
 
 export EDITOR=nvim
