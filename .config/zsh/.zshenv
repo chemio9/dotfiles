@@ -1,1 +1,0 @@
-GPG_TTY=$(tty)

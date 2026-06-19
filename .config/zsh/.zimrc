@@ -22,4 +22,5 @@ zmodule MichaelAquilina/zsh-you-should-use
 # zmodule Aloxaf/fzf-tab --if 'where fzf >>/dev/null'
 zmodule hlissner/zsh-autopair
 
-zmodule Valiev/almostontop
+# zmodule Valiev/almostontop
+zmodule remcohaszing/zsh-node-bin -s 'node-bin.plugin.zsh'
