@@ -1,0 +1,23 @@
+# See: https://github.com/rustledger/rustledger/issues/493
+[default]
+# Default beancount file (uncomment and edit)
+file = "~/money/main.beancount"
+
+[output]
+format = "text"
+color = true
+pager = "less -R"
+
+# [profiles.business]
+# file = "~/work/accounting/main.beancount"
+
+# [profiles.family]
+# file = "/shared/family-budget.beancount"
+
+# [commands.query]
+# output.format = "csv"
+
+[aliases]
+bal = "report balances"
+is = "report income-statement"
+bs = "report balsheet"
