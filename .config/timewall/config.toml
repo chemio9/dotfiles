@@ -1,6 +1,0 @@
-[location]
-lon = 116.04
-lat = 23.52
-
-[setter]
-command = ['swww', 'img', '%f']
