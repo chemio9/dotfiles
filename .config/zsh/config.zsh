@@ -107,11 +107,3 @@ sudo-command-line() {
 zle -N sudo-command-line
 #use <Esc><Esc> to add sudo
 bindkey "\e\e" sudo-command-line
-
-# Change Yazi's CWD to PWD on subshell exit
-if [[ -n "$YAZI_ID" ]]; then
-	function _yazi_cd() {
-		ya pub dds-cd --str "$PWD"
-	}
-	add-zsh-hook zshexit _yazi_cd
-fi

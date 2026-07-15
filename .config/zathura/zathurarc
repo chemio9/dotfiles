@@ -10,7 +10,7 @@ set synctex-editor-command "nvr --remote-silent %f -c %l"
 map <C-1> feedkeys ":set recolor-lightcolor \#c0d3d7<Return>" #仿墨水屏
 map <A-1> feedkeys ":set recolor-darkcolor \#111111<Return>" #仿墨水屏黑色
 
-set ctermbg=none
+#set ctermbg=none
 set notification-error-bg       "#282828" # bg
 set notification-error-fg       "#fb4934" # bright:red
 set notification-warning-bg     "#282828" # bg

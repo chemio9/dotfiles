@@ -1,3 +1,4 @@
 GO111MODULE=on
-GOMODCACHE=/home/clara/.cache/go/
+GOMODCACHE=/home/chemio/.cache/go
+GOPATH=/home/chemio/.go
 GOPROXY=https://goproxy.cn,direct

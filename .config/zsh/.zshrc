@@ -28,15 +28,14 @@ source $ZDOTDIR/config.zsh
 source $ZDOTDIR/alias.zsh
 
 typeset -U path PATH
-path=(~/.local/bin ~/.cargo/bin ~/.yarn/bin ~/.go/bin $path)
+path=(~/.local/bin ~/.cargo/bin ~/.yarn/bin ~/.go/bin $path ~/Android/Sdk/platform-tools)
 export PATH
 
 export EDITOR=nvim
-export BROWSER=firefox
 export MANPAGER='nvim +Man!'
+export BROWSER=chromium
 
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
-[[ ! -f /usr/bin/zoxide ]] || eval "$(zoxide init zsh)"
-[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+source $ZDOTDIR/integration.zsh

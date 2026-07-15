@@ -1,0 +1,39 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1778863323608112532 @name=QQ图片查看
+window-rule {
+    match app-id="^QQ$" title="^图片查看器$"
+    open-floating true
+    open-focused true
+}
+
+// @id=wr_1778905370686079848 @name=firefox
+window-rule {
+    match app-id="^firefox$"
+    open-maximized true
+}
+
+// @id=wr_1779620869697161663 @name=Pinentry-gtk
+window-rule {
+    match app-id="^Pinentry-gtk$"
+    open-floating true
+}
+
+// @id=wr_1781441110540618684 @name=moekoemusic
+window-rule {
+    match app-id="^moekoemusic$"
+    open-floating true
+}
+
+// @id=wr_1781626717032573977 @name=wechat
+window-rule {
+    match app-id="^wechat$" title="图片和视频"
+    open-floating true
+}
+
+// @id=wr_1781940319013055930 @name=kitty
+window-rule {
+    match app-id="^kitty$"
+    open-maximized true
+}
