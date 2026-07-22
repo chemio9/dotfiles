@@ -4,9 +4,9 @@
   editor = nvim
   pager = delta
 [user]
-  name = Clarence
-  email = chengruichen3@gmail.com
-  signingkey = BDD2A96380230561!
+  name = chemio9
+  email = chemio9@foxmail.com
+  signingkey = A0C6A4AB7D7FD3C2BCEEC88CED4E6781D1A87619!
 [commit]
   gpgsign = true
 
@@ -31,11 +31,5 @@
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 
-[credential "https://github.com"]
-  helper =
-  helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-  helper =
-  helper = !/usr/bin/gh auth git-credential
 [sendemail]
   sendmailCmd = /usr/bin/msmtp
